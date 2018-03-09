@@ -37,20 +37,6 @@ public class ETL {
 
     public static void main(String [] args) {
 
-//        String test = "D|~|4764|~|MFA_MRA|~|20140731105104|~|MFA_MRA|~|20140731105104|~|1807|~||~||~||~||~||~||~||~|MFA_MRA <2d LC Rest of World>|~|20140731105104|~||~|-|~| 7|~||~|LC Rest Of The World|~||~|UOB|~||~||~||~||~|1373|~||~||~||~|";
-//        String[] testArr = test.split(Pattern.quote("|~|"), -1);
-//        System.out.println(Arrays.toString(testArr));
-//        System.exit(0);
-
-        // YYYYMMDDHHMMSS and 20140731105104
-//        String strdatetime = "20140731105104";
-//        String format = "yyyyMMddHHmmss";
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
-//        LocalDateTime datetime = LocalDateTime.parse(strdatetime, formatter);
-//        Timestamp timestamp = Timestamp.valueOf(datetime);
-//        System.out.println(timestamp);
-//        System.exit(0);
-
 //        System.out.println(System.getenv("SPARK_HOME"));
 //        System.out.println(System.getenv("CLASSPATH"));
 
@@ -78,12 +64,6 @@ public class ETL {
                 String FLD_DATA_TYPE_TXT = rs.getString("FLD_DATA_TYPE_TXT");
                 String FLD_FORMAT_TXT = rs.getString("FLD_FORMAT_TXT");
                 String FLD_OPTIONALITY = rs.getString("FLD_OPTIONALITY");
-//                System.out.print("FLD_NM: " + FLD_NM);
-//                System.out.print(", FLD_LEN_NUM: " + FLD_LEN_NUM);
-//                System.out.print(", FLD_DEC_PREC: " + FLD_DEC_PREC);
-//                System.out.print(", FLD_DATA_TYPE_TXT: " + FLD_DATA_TYPE_TXT);
-//                System.out.print(", FLD_FORMAT_TXT: " + FLD_FORMAT_TXT);
-//                System.out.println(", FLD_OPTIONALITY: " + FLD_OPTIONALITY);
 
                 // Map to proper datetime format
                 if (FLD_FORMAT_TXT != null) {
@@ -158,17 +138,6 @@ public class ETL {
 
 
 //        spark.catalog().listDatabases().show(false);
-//
-//        try {
-//            Table stagingTable = spark.catalog().getTable("staging_dev_SG_RMS", "eda_RMS_SML_RATING_REPORT_D");
-//            System.out.println(stagingTable.description());
-//        } catch (AnalysisException e) {
-//            e.printStackTrace();
-//        }
-
-//        String test = "D|~|4764|~|MFA_MRA|~|20140731105104|~|MFA_MRA|~|20140731105104|~|1807";
-//        String[] ar = test.split(Pattern.quote("|~|"));
-//        System.out.println(Arrays.toString(ar));
 
         StructType schema = DataTypes.createStructType(fields);
 
