@@ -1,15 +1,9 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Example user template template
-### Example user template
-
-# IntelliJ project files
 .idea
 *.iml
-out
-gen
-.DS_Store
-.gitignore
 .idea/
 spark-warehouse/
 src/main/resources/
 target/generated-sources/
+
+# Remove mac indexing files
+.DS_Store
