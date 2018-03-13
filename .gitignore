@@ -5,5 +5,8 @@ spark-warehouse/
 src/main/resources/
 target/generated-sources/
 
+buildNumber.properties
+
 # Remove mac indexing files
 .DS_Store
+Jenkinsfile
