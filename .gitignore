@@ -3,8 +3,7 @@
 .idea/
 spark-warehouse/
 src/main/resources/
-target/generated-sources/
-
+target/
 buildNumber.properties
 
 # Remove mac indexing files
